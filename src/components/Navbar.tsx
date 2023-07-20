@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
     const fetchMenuItems = async () => {
       try {
         const response = await fetch(
-          `${process.env.API_URL}/api/menu-content/`,
+          "https://ztz2222.pythonanywhere.com/api/menu-content/",
         );
         if (!response.ok) {
           throw new Error("Failed to fetch menu items");

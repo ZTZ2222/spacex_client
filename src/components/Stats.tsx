@@ -16,7 +16,7 @@ const Stats: React.FC = () => {
     const fetchStatsItems = async () => {
       try {
         const response = await fetch(
-          `${process.env.API_URL}/api/stats-content/`,
+          "https://ztz2222.pythonanywhere.com/api/stats-content/",
         );
         if (!response.ok) {
           throw new Error("Failed to fetch stats items");
