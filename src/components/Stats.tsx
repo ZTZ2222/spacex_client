@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 
 interface StatsItemsData {
+  id: number;
   top_text: string;
   center_text: string;
   bottom_text: string;
@@ -22,6 +23,7 @@ const Stats: React.FC = () => {
           throw new Error("Failed to fetch stats items");
         }
         const data = await response.json();
+        console.log(data);
         setStatsItems(data);
       } catch (error) {
         console.log(error);
@@ -32,19 +34,19 @@ const Stats: React.FC = () => {
 
   return (
     <div className="grid grid-cols-2 gap-2">
-      {statsItems.map((stats, index) => (
+      {statsItems.map((data) => (
         <div
-          key={index}
-          className={`${stats.direction} font-museo-sans-700 flex cursor-pointer flex-col justify-center from-transparent from-50% to-gray-500 to-[300%] p-3 text-center hover:to-white`}
+          key={data.id}
+          className={`${data.direction} font-museo-sans-700 flex cursor-pointer flex-col justify-center from-transparent from-50% to-gray-500 to-[300%] p-3 text-center hover:to-white`}
         >
           <p className="mb-3 text-xs uppercase text-lime-100 md:text-sm xl:text-base">
-            {stats.top_text}
+            {data.top_text}
           </p>
           <h1 className="text-2xl font-medium uppercase text-white md:text-5xl xl:text-8xl">
-            {stats.center_text}
+            {data.center_text}
           </h1>
           <p className="text-xs uppercase text-lime-100 md:text-sm xl:text-base">
-            {stats.bottom_text}
+            {data.bottom_text}
           </p>
         </div>
       ))}
