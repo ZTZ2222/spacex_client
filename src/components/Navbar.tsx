@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
@@ -45,11 +46,13 @@ const Navbar: React.FC = () => {
       </ul>
       {/* Burger Menu */}
       <div className="flex flex-1 items-center justify-end sm:hidden">
-        <img
+        <Image
           src={toggle ? "/assets/close.svg" : "/assets/menu.svg"}
           alt="menu"
           className="mx-4 h-[28px] w-[28px] object-contain"
           onClick={() => setToggle((prev) => !prev)}
+          width={28}
+          height={28}
         />
 
         <div

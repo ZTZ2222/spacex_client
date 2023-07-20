@@ -45,8 +45,8 @@ const OurPartners = () => {
         компаниями.
       </h2>
       <ul className="my-10 grid grid-cols-2 gap-4 lg:grid-cols-4">
-        {PartnerList.map((item) => (
-          <li className="flex justify-center">
+        {PartnerList.map((item, index) => (
+          <li key={index} className="flex justify-center">
             <Image
               alt={item.name}
               src={item.image_url}
