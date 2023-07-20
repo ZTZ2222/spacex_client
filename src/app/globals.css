@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}
+
+@font-face {
+  font-family: "Museo Sans Cyrillic";
+  src: url("../../public/fonts/MuseoSansCyrl-700Regular.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+.font-museo-sans-700 {
+  font-family: "Museo Sans Cyrillic", sans-serif;
+  font-weight: 700;
+}
+
+.font-segoe-ui {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: normal;
+}
+
+:root {
+  --black-gradient: linear-gradient(
+    144.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
+  );
+  --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+}
+
+.text-gradient {
+  -webkit-background-clip: text;
+  background-clip: text;
+}
