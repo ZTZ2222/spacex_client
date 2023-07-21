@@ -16,7 +16,7 @@ const StatsBlock: React.FC<StatsItemProps> = ({
 }) => {
   return (
     <div
-      className={`font-museo-sans-700 flex cursor-pointer flex-col justify-center ${direction} from-transparent from-50% to-gray-500 to-[300%] p-3 text-center hover:to-white`}
+      className={`${direction} font-museo-sans-700 flex cursor-pointer flex-col justify-center from-transparent from-50% to-gray-500 to-[300%] p-3 text-center hover:to-white`}
     >
       <p className="mb-3 text-xs uppercase text-lime-100 md:text-sm xl:text-base">
         {top_text}
